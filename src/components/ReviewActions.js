@@ -36,7 +36,7 @@ function ratingDescendingSort(a, b) {
  *  rating: number
  * }[]} reviews
  */
-function putBestFirst(reviews) {
+export function putBestFirst(reviews) {
   const sorted = [...reviews];
   sorted.sort(ratingDescendingSort);
   return sorted;
@@ -52,7 +52,7 @@ function putBestFirst(reviews) {
  *  rating: number
  * }[]} reviews
  */
-function putWorstFirst(reviews) {
+export function putWorstFirst(reviews) {
   const sorted = [...reviews];
   sorted.sort(ratingAscendingSort);
   return sorted;
@@ -94,7 +94,7 @@ function oldestFirstSort(a, b) {
  *  rating: number
  * }[]} reviews
  */
-function putOldestFirst(reviews) {
+export function putOldestFirst(reviews) {
   const sorted = [...reviews];
   sorted.sort(oldestFirstSort);
   return sorted;
@@ -110,7 +110,7 @@ function putOldestFirst(reviews) {
  *  rating: number
  * }[]} reviews
  */
-function putRecentFirst(reviews) {
+export function putRecentFirst(reviews) {
   const sorted = [...reviews];
   sorted.sort(recentFirstSort);
   return sorted;
