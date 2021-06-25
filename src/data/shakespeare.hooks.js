@@ -28,7 +28,7 @@ export function useReviews() {
     });
   }, []);
 
-  return { reviewsLoading, reviews, average };
+  return { reviewsLoading, reviews, average, setReviews };
 }
 
 export function useReview(id) {
