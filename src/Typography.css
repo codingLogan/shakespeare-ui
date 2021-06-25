@@ -1,0 +1,22 @@
+.Typography-xs {
+  font-size: 0.67em;
+}
+.Typography-sm {
+  font-size: 0.83em;
+}
+.Typography-md {
+  font-size: 1em;
+}
+.Typography-lg {
+  font-size: 1.17em;
+}
+.Typography-xl {
+  font-size: 1.5em;
+}
+.Typography-xxl {
+  font-size: 2em;
+}
+
+.Typography-bold {
+  font-weight: bold;
+}

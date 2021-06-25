@@ -1,7 +1,10 @@
 import logo from "./logo.svg";
+import shakespeare from "./images/shakespeare.jpg";
 import "./App.css";
 import { useReviews } from "./shakespeare.hooks";
 import { Review } from "./Review";
+import Content from "./Content";
+import LoadingIndicator from "./LoadingIndicator";
 
 function App() {
   // Load all of the reviews
@@ -10,22 +13,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Shakespeare Reviews</p>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <h1>Shakespeare Reviews</h1>
 
-        {reviewsLoading && <div>Loading...</div>}
+        <img
+          className="App-landing-image"
+          src={shakespeare}
+          alt="shakespeare"
+        />
 
-        {reviews.map((review) => (
-          <Review review={review} key={review.id} />
-        ))}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React {process.env.REACT_APP_SHAKESPEARE}
-        </a>
+        <Content>
+          {reviewsLoading && <LoadingIndicator />}
+
+          {reviews.map((review) => (
+            <Review review={review} key={review.id} />
+          ))}
+        </Content>
       </header>
     </div>
   );
