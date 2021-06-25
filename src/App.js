@@ -20,19 +20,18 @@ function App() {
           src={shakespeare}
           alt="shakespeare"
         />
-
-        <Content>
-          {reviewsLoading && <LoadingIndicator />}
-
-          {!reviewsLoading && (
-            <ReviewsSummary average={average} reviewsNumber={reviews.length} />
-          )}
-
-          {reviews.map((review) => (
-            <Review review={review} key={review.id} />
-          ))}
-        </Content>
       </header>
+      <Content>
+        {reviewsLoading && <LoadingIndicator />}
+
+        {!reviewsLoading && (
+          <ReviewsSummary average={average} reviewsNumber={reviews.length} />
+        )}
+
+        {reviews.map((review) => (
+          <Review review={review} key={review.id} />
+        ))}
+      </Content>
     </div>
   );
 }

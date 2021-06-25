@@ -1,4 +1,10 @@
 .Review-container {
   padding: 16px;
   text-align: left;
+  border-radius: 4px;
+  background-color: #272727;
+}
+
+.Review-container {
+  margin-bottom: 4px;
 }
