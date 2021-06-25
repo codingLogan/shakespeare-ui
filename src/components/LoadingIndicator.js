@@ -1,4 +1,4 @@
-import shakespeareLoading from "./images/shakespeare-circle.png";
+import shakespeareLoading from "../images/shakespeare-circle.png";
 
 export default function LoadingIndicator() {
   return (
