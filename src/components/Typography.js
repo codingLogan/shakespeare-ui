@@ -2,7 +2,11 @@ import "./Typography.css";
 
 /**
  *
- * @param {object} props size: xxl, xl, lg, md, sm, xs
+ * @param {{
+ *  children: Element,
+ *  size: 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs',
+ *  bold: boolean
+ * }} props
  * @returns
  */
 export default function Typography({ children, size = "md", bold = false }) {

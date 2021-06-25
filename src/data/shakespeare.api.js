@@ -1,3 +1,7 @@
+/**
+ *
+ * @param {string} url
+ */
 function apiFetch(url) {
   return fetch(url, {
     headers: {
@@ -6,6 +10,17 @@ function apiFetch(url) {
   }).then((response) => response.json());
 }
 
+/**
+ *
+ * @param {string} id
+ * @returns {Promise<{
+ *    author: string,
+ *    body: string,
+ *    id: string,
+ *    publish_date: string,
+ *    rating: number
+ *  }[]>}
+ */
 export async function getAllReviews() {
   const allReviews = await apiFetch(
     "https://shakespeare.podium.com/api/reviews"
@@ -18,6 +33,17 @@ export async function getAllReviews() {
   return allReviews;
 }
 
+/**
+ *
+ * @param {string} id
+ * @returns {Promise<{
+ *    author: string,
+ *    body: string,
+ *    id: string,
+ *    publish_date: string,
+ *    rating: number
+ *  }>}
+ */
 export async function getReview(id) {
   const singleReview = await apiFetch(
     `https://shakespeare.podium.com/api/reviews/${id}`

@@ -1,8 +1,20 @@
 import "./Review.css";
 import Typography from "./Typography";
 
+/**
+ *
+ * @param {{
+ *  review: {
+ *    author: string,
+ *    body: string,
+ *    id: string,
+ *    publish_date: string,
+ *    rating: number
+ *  }
+ * }} props
+ */
 export function Review({ review }) {
-  const { author, body, id, publish_date, rating } = review;
+  const { author, body, publish_date, rating } = review;
   const displayDate = new Date(publish_date);
 
   return (
