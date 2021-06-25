@@ -1,10 +1,12 @@
+import "./ReviewActions.css";
+
 /**
  *
  * @param {{rating: number}} a
  * @param {{rating: number}} b
  */
 function ratingAscendingSort(a, b) {
-  if (a.rating == b.rating) {
+  if (a.rating === b.rating) {
     return 0;
   }
 
@@ -17,7 +19,7 @@ function ratingAscendingSort(a, b) {
  * @param {{rating: number}} b
  */
 function ratingDescendingSort(a, b) {
-  if (a.rating == b.rating) {
+  if (a.rating === b.rating) {
     return 0;
   }
 
@@ -62,7 +64,7 @@ function putWorstFirst(reviews) {
  * @param {{publish_date: string}} b
  */
 function recentFirstSort(a, b) {
-  if (a.publish_date == b.publish_date) {
+  if (a.publish_date === b.publish_date) {
     return 0;
   }
 
@@ -75,7 +77,7 @@ function recentFirstSort(a, b) {
  * @param {{publish_date: string}} b
  */
 function oldestFirstSort(a, b) {
-  if (a.publish_date == b.publish_date) {
+  if (a.publish_date === b.publish_date) {
     return 0;
   }
 
@@ -94,7 +96,7 @@ function oldestFirstSort(a, b) {
  */
 function putOldestFirst(reviews) {
   const sorted = [...reviews];
-  sorted.sort(recentFirstSort);
+  sorted.sort(oldestFirstSort);
   return sorted;
 }
 
@@ -127,7 +129,7 @@ function putRecentFirst(reviews) {
  */
 export default function ReviewActions({ reviews, reviewSetter }) {
   return (
-    <div>
+    <div className="ReviewActions-container">
       <button
         onClick={() => {
           reviewSetter(putBestFirst(reviews));
