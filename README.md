@@ -1,6 +1,6 @@
 # Shakespeare Reviews App
 
-In order for the App to get any reviews showing up, you MUST have an API key provided to you.
+In order for the App to get any reviews showing up, you MUST have an API key provided to you.  Once you have obtained a key, provide it to the app by setting an Environment Variable in a `.env` file named `REACT_APP_SHAKESPEARE`
 
 ## Getting set up and Running the App locally
 
